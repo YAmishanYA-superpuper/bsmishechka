@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Быков Михаил Андреевич</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 4em; 
+            margin-bottom: 20px;
+        }
+
+        .like-button {
+            background-color: red; 
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .like-button.liked {
+            background-color: gray; 
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Быков Михаил Андреевич</h1>
+    <p>из города Саратова, который учится в ГЭЛе самый крутой человек в этом мире.</p>
+
+    <button class="like-button">Лайк</button>
+
+    <script>
+        let button = document.querySelector('.like-button');
+        let liked = false; 
+
+        button.addEventListener('click', function() {
+            liked = !liked; 
+            if (liked) {
+                button.classList.add('liked');
+                button.textContent = "Нравится"; 
+            } else {
+                button.classList.remove('liked');
+                button.textContent = "Лайк";
+            }
+        });
+    </script>
+
+</body>
+</html>
